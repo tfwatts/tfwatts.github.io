@@ -7,12 +7,14 @@ hero:
   text: "Welcome! I'm Thomas, a Coast Guard leader and GIS graduate student. This is where I share my projects and what I'm learning."
   button_text: Research and Projects
   button_link: /projects/
-  caption: "[image title and data source]"
+  caption: "AIS derived vessel track in Chesapeake Bay and surrounding rivers."
 ---
 
-## Profile
-
-[Profile section goes here.]
+<section class="profile">
+  <h2>Profile</h2>
+  <p>I'm pursuing a Master of Science in GIS and Technology at the University of Arizona, with a focus on geospatial analysis. For 23 years I've served in the U.S. Coast Guard, leading maritime environmental response and regulatory compliance work, where knowing where things were happening often shaped every decision. I'm now building the analytical skills to match that experience, so I can keep using spatial data to serve the public in new ways.</p>
+  <p><a class="profile-link" href="{{ '/about/' | relative_url }}">More about me</a></p>
+</section>
 
 ## Featured projects
 

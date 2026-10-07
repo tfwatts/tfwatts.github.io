@@ -151,3 +151,17 @@ img {
     background: var(--navy-darkest);
   }
 }
+
+/* Profile section on the home page */
+.profile {
+  max-width: 760px;
+  margin: 1rem auto 2.5rem;
+}
+.profile h2 {
+  display: inline-block;
+  border-bottom: 3px solid var(--amber);
+  padding-bottom: 0.25rem;
+}
+.profile-link {
+  font-weight: 600;
+}
