@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<article class="project">
+  <header class="project-header">
+    <p class="project-tags">
+      <span class="tag-course">{{ page.course }}</span>
+      <span class="tag-method">{{ page.method }}</span>
+    </p>
+    <h1>{{ page.title }}</h1>
+  </header>
+
+  {{ content }}
+
+  <p class="project-back"><a href="{{ '/projects/' | relative_url }}">&larr; Back to Research and Projects</a></p>
+</article>
