@@ -2,3 +2,14 @@ title: Thomas Watts
 description: "[site tagline]"
 url: "https://tfwatts.github.io"
 baseurl: ""
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
