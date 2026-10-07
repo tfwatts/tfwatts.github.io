@@ -3,7 +3,7 @@ title: "[Project title]"
 course: "[Course name]"
 method: "[Method]"
 featured: true
-thumbnail: /assets/images/projects/test-project/thumb.jpg
+thumbnail: thumbnail: /assets/images/home/banner.jpg
 summary: "[One-line finding]"
 ---
 

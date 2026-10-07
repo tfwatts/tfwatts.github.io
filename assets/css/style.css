@@ -157,11 +157,72 @@ img {
   max-width: 760px;
   margin: 1rem auto 2.5rem;
 }
-.profile h2 {
+.profile h2, .featured h2 {
   display: inline-block;
   border-bottom: 3px solid var(--amber);
   padding-bottom: 0.25rem;
 }
 .profile-link {
   font-weight: 600;
+}
+
+/* Featured project cards */
+.featured {
+  margin-bottom: 3rem;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--cream);
+  color: var(--navy-darkest);
+  text-decoration: none;
+  border-radius: 8px;
+  overflow: hidden;
+  border-bottom: 3px solid transparent;
+  transition: transform 0.15s;
+}
+.card:hover {
+  transform: translateY(-3px);
+  border-bottom-color: var(--amber);
+}
+.card-thumb {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+.card-body {
+  padding: 1rem 1.25rem 1.25rem;
+}
+.card-body h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.15rem;
+}
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0 0 0.6rem;
+}
+.card-tags span {
+  font-size: 0.75rem;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+}
+.tag-course {
+  background: var(--navy-dark);
+  color: var(--cream);
+}
+.tag-method {
+  background: var(--amber);
+  color: var(--navy-darkest);
+}
+.card-summary {
+  margin: 0;
+  font-size: 0.95rem;
 }

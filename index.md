@@ -12,10 +12,16 @@ hero:
 
 <section class="profile">
   <h2>Profile</h2>
-  <p>I'm pursuing a Master of Science in GIS and Technology at the University of Arizona, with a focus on geospatial analysis. For 23 years I've served in the U.S. Coast Guard, leading maritime environmental response and regulatory compliance work, where knowing where things were happening often shaped every decision. I'm now building the analytical skills to match that experience, so I can keep using spatial data to serve the public in new ways.</p>
+  <p>I'm pursuing a Master of Science in GIS and Technology at the University of Arizona, with a focus on geospatial analysis. For 24 years I've served in the U.S. Coast Guard, leading maritime environmental response and regulatory compliance work, where knowing where things were happening often shaped every decision. I'm now building the analytical skills to match that experience, so I can keep using spatial data to serve the public in new ways.</p>
   <p><a class="profile-link" href="{{ '/about/' | relative_url }}">More about me</a></p>
 </section>
 
-## Featured projects
-
-[Featured cards go here.]
+<section class="featured">
+  <h2>Featured projects</h2>
+  <div class="card-grid">
+    {% assign featured = site.projects | where: "featured", true %}
+    {% for p in featured %}
+      {% include project-card.html project=p %}
+    {% endfor %}
+  </div>
+</section>
