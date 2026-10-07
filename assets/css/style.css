@@ -77,3 +77,22 @@ img {
   font-size: 0.9rem;
 }
 .site-footer p { margin: 0; }
+
+/* Full-width banner (any page with a banner label) */
+.page-banner {
+  margin: 0;
+}
+.page-banner img {
+  display: block;
+  width: 100%;
+  height: clamp(220px, 40vw, 480px);
+  object-fit: cover;
+  object-position: 55% 50%;
+}
+.page-banner figcaption {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0.5rem 1.5rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
