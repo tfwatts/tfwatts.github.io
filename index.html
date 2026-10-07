@@ -2,7 +2,7 @@
 title: Home
 hero:
   image: /assets/images/home/banner.jpg
-  alt: "AIS Data for Chesapeake Bay, James River, York River for the month of July 2025 overlayed on false color LandSat imagery from Google Earth Engine"
+  alt: "AIS Data for Chesapeake Bay, James River, York River for the month of July 2025 overlaid on false color Landsat imagery from Google Earth Engine"
   title: Thomas Watts
   text: "Welcome! I'm Thomas, a Coast Guard leader and GIS graduate student. This is where I share my projects and what I'm learning."
   button_text: Research and Projects
@@ -18,8 +18,9 @@ hero:
 
 <section class="featured">
   <h2>Featured projects</h2>
+  {% assign featured = site.projects | where: "featured", true %}
+  <p>Projects found: {{ site.projects | size }} · Featured: {{ featured | size }}</p>  
   <div class="card-grid">
-    {% assign featured = site.projects | where: "featured", true %}
     {% for p in featured %}
       {% include project-card.html project=p %}
     {% endfor %}
