@@ -255,3 +255,32 @@ img {
   color: var(--navy-darkest);
   border: 1px solid var(--amber);
 }
+
+/* Filter buttons on Research and Projects */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 1.5rem 0 2rem;
+}
+.filter-button {
+  font: inherit;
+  font-size: 0.9rem;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  border: 1.5px solid var(--navy);
+  background: var(--white);
+  color: var(--navy);
+  cursor: pointer;
+}
+.filter-button:hover {
+  border-color: var(--amber);
+}
+.filter-button.is-active {
+  background: var(--navy-dark);
+  border-color: var(--navy-dark);
+  color: var(--cream);
+}
+.card[hidden] {
+  display: none;
+}

@@ -1,5 +1,5 @@
 {% assign project = include.project %}
-<a class="card" href="{{ project.url | relative_url }}">
+<a class="card" href="{{ project.url | relative_url }}" data-course="{{ project.course | slugify }}" data-featured="{{ project.featured | default: false }}">
   {% if project.thumbnail %}
   <img class="card-thumb" src="{{ project.thumbnail | relative_url }}" alt="Map thumbnail for {{ project.title }}">
   {% endif %}

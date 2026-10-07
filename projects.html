@@ -7,14 +7,42 @@ permalink: /projects/
 <p class="page-intro">[Short introduction to this page.]</p>
 
 {% assign courses = site.projects | group_by: "course" %}
-{% for course in courses %}
-<section class="course-group">
-  <h2>{{ course.name }}</h2>
-  <div class="card-grid">
+
+<div class="filter-bar">
+  <button class="filter-button is-active" data-filter="all">Show all</button>
+  <button class="filter-button" data-filter="featured">Featured</button>
+  {% for course in courses %}
+  <button class="filter-button" data-filter="{{ course.name | slugify }}">{{ course.name }}</button>
+  {% endfor %}
+</div>
+
+<div class="card-grid">
+  {% for course in courses %}
     {% assign items = course.items | sort: "order", "last" %}
     {% for p in items %}
       {% include project-card.html project=p show_featured=true %}
     {% endfor %}
-  </div>
-</section>
-{% endfor %}
+  {% endfor %}
+</div>
+
+<script>
+  const buttons = document.querySelectorAll('.filter-button');
+  const cards = document.querySelectorAll('.card-grid .card');
+
+  buttons.forEach(function (button) {
+    button.addEventListener('click', function () {
+      const filter = button.dataset.filter;
+
+      buttons.forEach(function (b) { b.classList.remove('is-active'); });
+      button.classList.add('is-active');
+
+      cards.forEach(function (card) {
+        const show =
+          filter === 'all' ||
+          (filter === 'featured' && card.dataset.featured === 'true') ||
+          card.dataset.course === filter;
+        card.hidden = !show;
+      });
+    });
+  });
+</script>
