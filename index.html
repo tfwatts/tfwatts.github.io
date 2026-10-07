@@ -18,8 +18,7 @@ hero:
 
 <section class="featured">
   <h2>Featured projects</h2>
-  {% assign featured = site.projects | where: "featured", true %}
-  <p>Projects found: {{ site.projects | size }} · Featured: {{ featured | size }}</p>  
+  {% assign featured = site.projects | where: "featured", true %}  
   <div class="card-grid">
     {% for p in featured %}
       {% include project-card.html project=p %}
