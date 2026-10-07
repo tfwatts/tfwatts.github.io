@@ -7,22 +7,31 @@
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 <body>
-  <header class="site-header">
+  <header class="site-header{% if page.hero %} has-hero{% endif %}">
     <a class="site-title" href="{{ '/' | relative_url }}">{{ site.title }}</a>
     <nav class="site-nav">
       <a href="{{ '/' | relative_url }}">Home</a>
-      <a href="{{ '/projects/' | relative_url }}">Projects</a>
+      <a href="{{ '/projects/' | relative_url }}">Research and Projects</a>
       <a href="{{ '/about/' | relative_url }}">About</a>
       <a href="{{ '/resume/' | relative_url }}">Resume</a>
     </nav>
   </header>
-  {% if page.banner %}
-  <figure class="page-banner">
-    <img src="{{ page.banner | relative_url }}" alt="{{ page.banner_alt }}">
-    {% if page.banner_caption %}
-    <figcaption>{{ page.banner_caption }}</figcaption>
+    {% if page.hero %}
+  <section class="hero">
+    <div class="hero-inner">
+      <img class="hero-image" src="{{ page.hero.image | relative_url }}" alt="{{ page.hero.alt }}">
+      <div class="hero-panel">
+        <h1>{{ page.hero.title }}</h1>
+        <p>{{ page.hero.text }}</p>
+        {% if page.hero.button_text %}
+        <a class="hero-button" href="{{ page.hero.button_link | relative_url }}">{{ page.hero.button_text }}</a>
+        {% endif %}
+      </div>
+    </div>
+    {% if page.hero.caption %}
+    <p class="hero-caption">{{ page.hero.caption }}</p>
     {% endif %}
-  </figure>
+  </section>
   {% endif %}
   <main class="site-main">
     {{ content }}

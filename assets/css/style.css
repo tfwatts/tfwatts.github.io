@@ -78,21 +78,76 @@ img {
 }
 .site-footer p { margin: 0; }
 
-/* Full-width banner (any page with a banner label) */
-.page-banner {
-  margin: 0;
+/* Header joins the hero on pages that have one */
+.site-header.has-hero {
+  border-bottom: none;
 }
-.page-banner img {
-  display: block;
-  width: 100%;
-  height: clamp(220px, 40vw, 480px);
-  object-fit: cover;
-  object-position: 55% 50%;
+
+/* Hero: image on the right, panel overlapping lower left */
+.hero {
+  background: var(--navy-dark);
+  border-bottom: 4px solid var(--amber);
+  padding: 1rem 1.5rem 2.5rem;
 }
-.page-banner figcaption {
-  max-width: 960px;
+.hero-inner {
+  position: relative;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0.5rem 1.5rem;
-  font-size: 0.85rem;
-  color: var(--muted);
+}
+.hero-image {
+  display: block;
+  width: 66%;
+  margin-left: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.hero-panel {
+  position: absolute;
+  left: 0;
+  bottom: 8%;
+  width: 52%;
+  background: rgba(1, 7, 54, 0.9);
+  padding: 2rem 2.25rem;
+  border-radius: 4px;
+}
+.hero-panel h1 {
+  color: var(--white);
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  margin: 0 0 0.75rem;
+}
+.hero-panel p {
+  color: var(--cream);
+  margin: 0 0 1.25rem;
+}
+.hero-button {
+  display: inline-block;
+  color: var(--amber);
+  border: 1.5px solid var(--amber);
+  border-radius: 999px;
+  padding: 0.5rem 1.25rem;
+  text-decoration: none;
+}
+.hero-button:hover {
+  background: var(--amber);
+  color: var(--navy-darkest);
+}
+.hero-caption {
+  max-width: 1200px;
+  margin: 0.5rem auto 0;
+  text-align: right;
+  font-size: 0.8rem;
+  color: var(--cream);
+}
+
+/* Phones: panel drops below the image */
+@media (max-width: 760px) {
+  .hero-image {
+    width: 100%;
+  }
+  .hero-panel {
+    position: static;
+    width: 100%;
+    background: var(--navy-darkest);
+  }
 }

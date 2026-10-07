@@ -1,6 +1,6 @@
 ---
 title: "[Project title]"
-course: "[Course number: Course name]"
+course: "[Course name]"
 method: "[Method]"
 featured: true
 thumbnail: /assets/images/projects/test-project/thumb.jpg
