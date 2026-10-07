@@ -1,0 +1,20 @@
+---
+title: Research and Projects
+permalink: /projects/
+---
+
+<h1>Research and Projects</h1>
+<p class="page-intro">[Short introduction to this page.]</p>
+
+{% assign courses = site.projects | group_by: "course" %}
+{% for course in courses %}
+<section class="course-group">
+  <h2>{{ course.name }}</h2>
+  <div class="card-grid">
+    {% assign items = course.items | sort: "order", "last" %}
+    {% for p in items %}
+      {% include project-card.html project=p show_featured=true %}
+    {% endfor %}
+  </div>
+</section>
+{% endfor %}

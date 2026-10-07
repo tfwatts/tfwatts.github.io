@@ -6,6 +6,9 @@
   <div class="card-body">
     <h3>{{ project.title }}</h3>
     <p class="card-tags">
+      {% if include.show_featured and project.featured %}
+      <span class="tag-featured">Featured</span>
+      {% endif %}
       <span class="tag-course">{{ project.course }}</span>
       <span class="tag-method">{{ project.method }}</span>
     </p>

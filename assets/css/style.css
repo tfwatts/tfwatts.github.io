@@ -157,7 +157,7 @@ img {
   max-width: 760px;
   margin: 1rem auto 2.5rem;
 }
-.profile h2, .featured h2 {
+.profile h2, .featured h2, .course-group h2 {
   display: inline-block;
   border-bottom: 3px solid var(--amber);
   padding-bottom: 0.25rem;
@@ -240,4 +240,18 @@ img {
   margin-top: 0.5rem;
   font-size: 0.85rem;
   color: var(--muted);
+}
+
+/* Research and Projects page */
+.page-intro {
+  color: var(--muted);
+  max-width: 760px;
+}
+.course-group {
+  margin: 2rem 0 3rem;
+}
+.tag-featured {
+  background: var(--white);
+  color: var(--navy-darkest);
+  border: 1px solid var(--amber);
 }
