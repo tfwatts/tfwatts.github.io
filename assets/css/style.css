@@ -226,3 +226,18 @@ img {
   margin: 0;
   font-size: 0.95rem;
 }
+/* Maps on project pages */
+.project-map {
+  margin: 1.5rem 0;
+}
+.project-map img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(13, 28, 66, 0.15);
+}
+.project-map figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
