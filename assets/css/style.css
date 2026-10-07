@@ -284,3 +284,29 @@ img {
 .card[hidden] {
   display: none;
 }
+
+/* Project pages */
+.project-header {
+  border-bottom: 3px solid var(--amber);
+  padding-bottom: 1rem;
+  margin-bottom: 1.5rem;
+}
+.project-header h1 {
+  margin: 0.5rem 0 0;
+}
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0;
+}
+.project-tags span {
+  font-size: 0.8rem;
+  padding: 0.2rem 0.7rem;
+  border-radius: 999px;
+}
+.project-back {
+  margin-top: 2.5rem;
+  font-weight: 600;
+}
+

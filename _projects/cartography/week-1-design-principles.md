@@ -8,10 +8,6 @@ thumbnail: /assets/images/projects/cartography/week-1/thumb.jpg
 summary: "Sonoma County, California — its rivers, state and US routes, rail lines, and state parks set against a hillshade of the county's terrain."
 ---
 
-# {{ page.title }}
-
-{{ page.course }} · {{ page.method }}
-
 <figure class="project-map">
   <a href="{{ '/assets/images/projects/cartography/week-1/map.png' | relative_url }}">
     <img src="{{ '/assets/images/projects/cartography/week-1/map.png' | relative_url }}" alt="[Describe the map in a sentence]">
