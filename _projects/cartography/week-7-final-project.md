@@ -31,13 +31,21 @@ Like Ogilby's road maps, each map follows the trail rather than the compass, so 
 
 On a phone, tap any map to open it full size and zoom in.
 
-## About the design
+## About the Map Panels
 
-In 1675, John Ogilby published Britannia, an atlas that drew England's main roads as long, narrow strips, each turned to follow its road and given its own compass rose. This project borrows that idea for a modern trail.
+This project is built around one idea: letting a viewer feel the length of Virginia’s Appalachian Trail and its constant climbs and descents. Every design choice serves that goal.
 
-All five maps share one scale, 1:250,000, so a mile of trail takes the same space on every map and the distance can be felt honestly. The trail is drawn white with a dark outline, a nod to the white blazes that mark the Appalachian Trail. Soft shaded relief and muted elevation colors show the shape of the land, and the same colors fill the elevation profiles. Roads appear only as short stubs where they cross the trail, as side roads did on Ogilby's maps, while Skyline Drive and the Blue Ridge Parkway, which wind back and forth across the trail, are shown as one dashed companion road. Land outside Virginia is faded so the eye stays on the state.
+The strip. The format comes from John Ogilby’s Britannia (1675), which drew roads as long, narrow strips turned to follow their route. The trail is cut into five overlapping panels using ArcGIS Pro’s strip map tools and a map series. All five share one scale, 1:250,000, so a mile of trail takes the same space on every panel and the distance is shown honestly; changing the scale between panels would make some sections feel shorter than they are. Because each panel follows the trail rather than the compass, each has its own compass rose, and ringed markers show exactly where one panel hands off to the next.
 
-Titles are set in IM Fell English, a digital revival of the Fell types collected at Oxford in the late 1600s, the same era as Ogilby's atlas. Labels are set in Georgia for easy reading on screens.
+The terrain. The land is drawn with a multidirectional hillshade, which lights the terrain from several directions at once. A single light source would have shifted direction on the rotated panels and made some ridges look like valleys. Muted elevation colors, from sage green in the valleys to light tan on the ridges, sit beneath the shading, and the same colors fill the elevation profiles so the map and profile read as one.
+
+Visual hierarchy. The trail is the most important feature, so it is drawn white with a dark outline, a nod to the white blazes that mark it, and it sits above everything else. Mile markers, shelters, and towns come next, while roads, rivers, and park boundaries stay quiet in the background. Roads appear only as short, straight stubs where they cross the trail, a simplification suited to the scale and borrowed from the side roads on Ogilby’s maps. Land outside Virginia is faded so the eye stays in the state.
+
+Distance and elevation. The trail was measured from Harpers Ferry (mile 0) to the Tennessee line (mile 554.5), and the mile markers, shelters, road crossings, and places were all located by that measured distance. That is what lets the elevation profile beside each panel match the map mile for mile.
+
+Type. Titles use IM Fell English, a revival of type from Ogilby’s era. Labels use bold Georgia, a serif designed for reading on screens, with a thin light outline so names stay readable over shaded relief.
+
+The locator map. The overview of the whole trail is turned so the trail runs straight down the page, echoing the strip, and it uses the same trail symbols, so Virginia’s quarter of the journey stands out at a glance. Its trail line was simplified to suit the much smaller scale.
 
 ## Sources and notes
 
@@ -64,8 +72,3 @@ Titles are set in IM Fell English, a digital revival of the Fell types collected
 
 - **Title typeface.** IM Fell English, digitized by Igino Marini. [Google Fonts](https://fonts.google.com/specimen/IM+Fell+English).
 - **Inspiration.** Ogilby, John. *Britannia, Volume the First.* London, 1675.
-
-## Methods and tools 
-
-Maps were made in ArcGIS Pro. The trail was measured along its length from Harpers Ferry (mile 0) to the Tennessee line (mile 554.5), and mile markers, shelters, road crossings, and places were located by that measured distance. The strip was cut into five panels at a single scale of 1:250,000 using ArcGIS Pro's strip map tools and a map series. Elevation was prepared in Google Earth Engine. The elevation profiles and the straight road stubs were drawn with custom Python scripts (matplotlib and Pillow for the profiles, ArcPy for the stubs). The scrolling map page is hosted on GitHub Pages.
-Mileage is measured from the map data and may differ slightly from the Appalachian Trail Conservancy's official figures, which change from year to year as the trail is relocated. "About a quarter" is based on a total trail length of roughly 2,200 miles.
