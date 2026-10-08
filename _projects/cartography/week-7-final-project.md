@@ -19,7 +19,7 @@ This project maps that journey as one long strip, inspired by John Ogilby's Brit
   <figcaption>The whole Appalachian Trail, Georgia to Maine, with Virginia's 554.5 miles highlighted.</figcaption>
 </figure>
 
-<p class="button-row"><a class="button button-large" href="https://tfwatts.github.io/550-miles-of-virginia/">Begin the walk &rarr;</a></p>
+<p class="button-row"><a class="button button-large" href="https://tfwatts.github.io/550-miles-of-virginia/">Begin the hike &rarr;</a></p>
 
 ## How to read the maps
 
