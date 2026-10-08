@@ -39,6 +39,8 @@ This project is built around one idea: letting a viewer feel the length of Virgi
 
 **The terrain.** The land is drawn with a multidirectional hillshade, which lights the terrain from several directions at once. A single light source would have shifted direction on the rotated panels and made some ridges look like valleys. Muted elevation colors, from sage green in the valleys to light tan on the ridges, sit beneath the shading, and the same colors fill the elevation profiles so the map and profile read as one.
 
+**Projection.** The panels use the NAD 1983 Virginia Lambert projection, a state-based projection that keeps distances accurate within Virginia, which matters for a map built around trail miles. The locator map uses a Lambert Conformal Conic projection suited to the eastern United States, which keeps the shapes of the states familiar across the trail’s whole length.
+
 **Visual hierarchy.** The trail is the most important feature, so it is drawn white with a dark outline, a nod to the white blazes that mark it, and it sits above everything else. Mile markers, shelters, and towns come next, while roads, rivers, and park boundaries stay quiet in the background. Roads appear only as short, straight stubs where they cross the trail, a simplification suited to the scale and borrowed from the side roads on Ogilby’s maps. Land outside Virginia is faded so the eye stays in the state.
 
 **Distance and elevation.** The trail was measured from Harpers Ferry (mile 0) to the Tennessee line (mile 554.5), and the mile markers, shelters, road crossings, and places were all located by that measured distance. That is what lets the elevation profile beside each panel match the map mile for mile.
@@ -46,6 +48,8 @@ This project is built around one idea: letting a viewer feel the length of Virgi
 **Type.** Titles use IM Fell English, a revival of type from Ogilby’s era. Labels use bold Georgia, a serif designed for reading on screens, with a thin light outline so names stay readable over shaded relief.
 
 **The locator map.** The overview of the whole trail is turned so the trail runs straight down the page, echoing the strip, and it uses the same trail symbols, so Virginia’s quarter of the journey stands out at a glance. Its trail line was simplified to suit the much smaller scale.
+
+**Methods and tools.** Maps were made in ArcGIS Pro. The trail was measured along its length from Harpers Ferry (mile 0) to the Tennessee line (mile 554.5), and mile markers, shelters, road crossings, and places were located by that measured distance. The strip was cut into five panels at a single scale using ArcGIS Pro’s strip map tools and a map series. Elevation was prepared in Google Earth Engine. The elevation profiles and the straight road stubs were drawn with custom Python scripts. Mileage is measured from the map data and may differ slightly from the Appalachian Trail Conservancy’s official figures.
 
 ## Sources and notes
 
