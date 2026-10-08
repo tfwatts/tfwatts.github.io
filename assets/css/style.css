@@ -310,3 +310,10 @@ img {
   font-weight: 600;
 }
 
+/* Wide maps: extend beyond the text column on large screens */
+.project-map.wide {
+  width: min(1200px, calc(100vw - 3rem));
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
