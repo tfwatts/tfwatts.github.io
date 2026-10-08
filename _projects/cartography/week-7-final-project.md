@@ -31,21 +31,21 @@ Like Ogilby's road maps, each map follows the trail rather than the compass, so 
 
 On a phone, tap any map to open it full size and zoom in.
 
-## About the Map Panels
+## About the map panels
 
 This project is built around one idea: letting a viewer feel the length of Virginia’s Appalachian Trail and its constant climbs and descents. Every design choice serves that goal.
 
-The strip. The format comes from John Ogilby’s Britannia (1675), which drew roads as long, narrow strips turned to follow their route. The trail is cut into five overlapping panels using ArcGIS Pro’s strip map tools and a map series. All five share one scale, 1:250,000, so a mile of trail takes the same space on every panel and the distance is shown honestly; changing the scale between panels would make some sections feel shorter than they are. Because each panel follows the trail rather than the compass, each has its own compass rose, and ringed markers show exactly where one panel hands off to the next.
+**The strip.** The format comes from John Ogilby’s Britannia (1675), which drew roads as long, narrow strips turned to follow their route. The trail is cut into five overlapping panels using ArcGIS Pro’s strip map tools and a map series. All five share one scale, 1:250,000, so a mile of trail takes the same space on every panel and the distance is shown honestly; changing the scale between panels would make some sections feel shorter than they are. Because each panel follows the trail rather than the compass, each has its own compass rose, and ringed markers show exactly where one panel hands off to the next.
 
-The terrain. The land is drawn with a multidirectional hillshade, which lights the terrain from several directions at once. A single light source would have shifted direction on the rotated panels and made some ridges look like valleys. Muted elevation colors, from sage green in the valleys to light tan on the ridges, sit beneath the shading, and the same colors fill the elevation profiles so the map and profile read as one.
+**The terrain.** The land is drawn with a multidirectional hillshade, which lights the terrain from several directions at once. A single light source would have shifted direction on the rotated panels and made some ridges look like valleys. Muted elevation colors, from sage green in the valleys to light tan on the ridges, sit beneath the shading, and the same colors fill the elevation profiles so the map and profile read as one.
 
-Visual hierarchy. The trail is the most important feature, so it is drawn white with a dark outline, a nod to the white blazes that mark it, and it sits above everything else. Mile markers, shelters, and towns come next, while roads, rivers, and park boundaries stay quiet in the background. Roads appear only as short, straight stubs where they cross the trail, a simplification suited to the scale and borrowed from the side roads on Ogilby’s maps. Land outside Virginia is faded so the eye stays in the state.
+**Visual hierarchy.** The trail is the most important feature, so it is drawn white with a dark outline, a nod to the white blazes that mark it, and it sits above everything else. Mile markers, shelters, and towns come next, while roads, rivers, and park boundaries stay quiet in the background. Roads appear only as short, straight stubs where they cross the trail, a simplification suited to the scale and borrowed from the side roads on Ogilby’s maps. Land outside Virginia is faded so the eye stays in the state.
 
-Distance and elevation. The trail was measured from Harpers Ferry (mile 0) to the Tennessee line (mile 554.5), and the mile markers, shelters, road crossings, and places were all located by that measured distance. That is what lets the elevation profile beside each panel match the map mile for mile.
+**Distance and elevation.** The trail was measured from Harpers Ferry (mile 0) to the Tennessee line (mile 554.5), and the mile markers, shelters, road crossings, and places were all located by that measured distance. That is what lets the elevation profile beside each panel match the map mile for mile.
 
-Type. Titles use IM Fell English, a revival of type from Ogilby’s era. Labels use bold Georgia, a serif designed for reading on screens, with a thin light outline so names stay readable over shaded relief.
+**Type.** Titles use IM Fell English, a revival of type from Ogilby’s era. Labels use bold Georgia, a serif designed for reading on screens, with a thin light outline so names stay readable over shaded relief.
 
-The locator map. The overview of the whole trail is turned so the trail runs straight down the page, echoing the strip, and it uses the same trail symbols, so Virginia’s quarter of the journey stands out at a glance. Its trail line was simplified to suit the much smaller scale.
+**The locator map.** The overview of the whole trail is turned so the trail runs straight down the page, echoing the strip, and it uses the same trail symbols, so Virginia’s quarter of the journey stands out at a glance. Its trail line was simplified to suit the much smaller scale.
 
 ## Sources and notes
 
