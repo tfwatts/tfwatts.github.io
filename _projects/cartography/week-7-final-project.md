@@ -5,6 +5,7 @@ course: "Cartography"
 method: "Final Project"
 order: 7
 featured: true
+theme: ogilby
 thumbnail: /assets/images/projects/cartography/week-7/thumb.jpg
 summary: "The Appalachian Trail from Harpers Ferry to the Tennessee line."
 ---
@@ -18,7 +19,7 @@ This project maps that journey as one long strip, inspired by John Ogilby's Brit
   <figcaption>The whole Appalachian Trail, Georgia to Maine, with Virginia's 554.5 miles highlighted.</figcaption>
 </figure>
 
-<p><a class="button" href="https://tfwatts.github.io/550-miles-of-virginia/">Begin the walk</a></p>
+<p class="button-row"><a class="button button-large" href="https://tfwatts.github.io/550-miles-of-virginia/">Begin the walk &rarr;</a></p>
 
 ## How to read the maps
 
@@ -40,18 +41,29 @@ Titles are set in IM Fell English, a digital revival of the Fell types collected
 
 ## Sources and notes
 
-Appalachian Trail centerline. National Park Service, Appalachian National Scenic Trail. APPA Official Centerline. ArcGIS Online. https://www.arcgis.com/home/item.html?id=71975f7fc14347c7a6c1059fdb593f91 (accessed 09/24/2026).
-Shelters. National Park Service, Appalachian National Scenic Trail. Appalachian National Scenic Trail – Official Features and Facilities. ArcGIS Online. https://www.arcgis.com/home/item.html?id=2739a451a90c4a3283be4ccd6a6a12a9 (accessed 09/24/2026).
-National Park Service land. National Park Service, Land Resources Division. Administrative Boundaries of National Park System Units. ArcGIS Online. https://www.arcgis.com/home/item.html?id=e62a2420170b4452b4a334db92130220 (accessed 09/24/2026).
-National forests. USDA Forest Service. Administrative Forest Boundaries. https://data.fs.usda.gov/geodata/edw/datasets.php?dsetCategory=boundaries (accessed 09/24/2026).
-Skyline Drive. National Park Service, Shenandoah National Park. SHEN_TRANS_SkylineDrive_ln. https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/SHEN_TRANS_SkylineDrive_ln/FeatureServer/40 (accessed 10/03/2026).
-Elevation. U.S. Geological Survey, 3D Elevation Program (3DEP), 1/3 arc-second (10 m) digital elevation model, accessed through Google Earth Engine and resampled to 30 m. https://www.usgs.gov/3d-elevation-program (accessed 09/24/2026).
-Roads and states. U.S. Census Bureau. TIGER/Line Shapefiles, 2025: Primary and Secondary Roads (Virginia, West Virginia); States. https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html (accessed 09/24/2026).
-Rivers. Esri. USA Rivers and Streams (derived from the USGS National Hydrography Dataset). ArcGIS Living Atlas. https://hub.arcgis.com/datasets/esri::usa-rivers-and-streams/about (accessed 09/24/2026).
-Canada (locator map). Esri. World Countries (Generalized). ArcGIS Living Atlas. https://hub.arcgis.com/datasets/esri::world-countries-generalized/about (accessed 10/03/2026).
-Place locations. Located with the Esri World Geocoding Service in ArcGIS Pro.
-Title typeface. IM Fell English, digitized by Igino Marini. Google Fonts. https://fonts.google.com/specimen/IM+Fell+English
-Inspiration. Ogilby, John. Britannia, Volume the First. London, 1675.
+### Trail and park data
+
+- **Appalachian Trail centerline.** National Park Service, Appalachian National Scenic Trail. [APPA Official Centerline](https://www.arcgis.com/home/item.html?id=71975f7fc14347c7a6c1059fdb593f91). ArcGIS Online (accessed 09/24/2026).
+- **Shelters.** National Park Service, Appalachian National Scenic Trail. [Appalachian National Scenic Trail – Official Features and Facilities](https://www.arcgis.com/home/item.html?id=2739a451a90c4a3283be4ccd6a6a12a9). ArcGIS Online (accessed 09/24/2026).
+- **National Park Service land.** National Park Service, Land Resources Division. [Administrative Boundaries of National Park System Units](https://www.arcgis.com/home/item.html?id=e62a2420170b4452b4a334db92130220). ArcGIS Online (accessed 09/24/2026).
+- **National forests.** USDA Forest Service. [Administrative Forest Boundaries](https://data.fs.usda.gov/geodata/edw/datasets.php?dsetCategory=boundaries) (accessed 09/24/2026).
+- **Skyline Drive.** National Park Service, Shenandoah National Park. [SHEN\_TRANS\_SkylineDrive\_ln](https://services1.arcgis.com/fBc8EJBxQRMcHlei/arcgis/rest/services/SHEN_TRANS_SkylineDrive_ln/FeatureServer/40) (accessed 10/03/2026).
+
+### Terrain, roads, and water
+
+- **Elevation.** U.S. Geological Survey, [3D Elevation Program (3DEP)](https://www.usgs.gov/3d-elevation-program), 1/3 arc-second (10 m) digital elevation model, accessed through Google Earth Engine and resampled to 30 m (accessed 09/24/2026).
+- **Roads and states.** U.S. Census Bureau. [TIGER/Line Shapefiles, 2025](https://www.census.gov/geographies/mapping-files/time-series/geo/tiger-line-file.html): Primary and Secondary Roads (Virginia, West Virginia); States (accessed 09/24/2026).
+- **Rivers.** Esri. [USA Rivers and Streams](https://hub.arcgis.com/datasets/esri::usa-rivers-and-streams/about) (derived from the USGS National Hydrography Dataset). ArcGIS Living Atlas (accessed 09/24/2026).
+
+### Locator map and places
+
+- **Canada (locator map).** Esri. [World Countries (Generalized)](https://hub.arcgis.com/datasets/esri::world-countries-generalized/about). ArcGIS Living Atlas (accessed 10/03/2026).
+- **Place locations.** Located with the Esri World Geocoding Service in ArcGIS Pro.
+
+### Type and inspiration
+
+- **Title typeface.** IM Fell English, digitized by Igino Marini. [Google Fonts](https://fonts.google.com/specimen/IM+Fell+English).
+- **Inspiration.** Ogilby, John. *Britannia, Volume the First.* London, 1675.
 
 ## Methods and tools 
 

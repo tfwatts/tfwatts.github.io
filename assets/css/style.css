@@ -322,3 +322,73 @@ img {
   font-size: 1.15rem;
   color: var(--muted);
 }
+
+/* Ogilby theme: matches the 550 Miles of Virginia strip map */
+.theme-ogilby {
+  --paper: #F1E9D6;
+  --ink: #3B2F26;
+  --ink-soft: #5B4A3A;
+  --rust: #7A4B35;
+  --rule: #CDBFA3;
+  background: var(--paper);
+}
+.theme-ogilby .site-main {
+  color: var(--ink);
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+}
+.theme-ogilby .site-main h1,
+.theme-ogilby .site-main h2,
+.theme-ogilby .site-main h3 {
+  font-family: "IM Fell English", Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  color: var(--ink);
+}
+.theme-ogilby .project-header {
+  border-bottom-color: var(--rule);
+}
+.theme-ogilby .project-header h1 {
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  line-height: 1.05;
+}
+.theme-ogilby .project-subtitle {
+  font-family: "IM Fell English", Georgia, serif;
+  font-style: italic;
+  font-size: clamp(1.2rem, 2.6vw, 1.5rem);
+  color: var(--ink-soft);
+}
+.theme-ogilby .project-tags .tag-course {
+  background: var(--ink);
+  color: var(--paper);
+}
+.theme-ogilby .project-tags .tag-method {
+  background: var(--rule);
+  color: var(--ink);
+}
+.theme-ogilby .site-main a {
+  color: var(--rust);
+}
+.theme-ogilby .project-map figcaption {
+  color: var(--ink-soft);
+}
+
+/* Large centered button */
+.button-row {
+  text-align: center;
+  margin: 2rem 0 2.5rem;
+}
+.button-large {
+  font-size: 1.25rem;
+  padding: 0.9rem 2.4rem;
+}
+.theme-ogilby .site-main .button {
+  background: var(--rust);
+  color: var(--paper);
+  font-family: "IM Fell English", Georgia, serif;
+  font-weight: 400;
+}
+.theme-ogilby .site-main .button:hover {
+  background: var(--ink);
+  color: var(--paper);
+}
