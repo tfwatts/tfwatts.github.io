@@ -1,5 +1,5 @@
 ---
-title: "Sonoma County, CA"
+title: "2012 U.S. Presidential Election Results by County: Georgia"
 course: "Cartography"
 method: "Symbols and Iconography"
 order: 5
