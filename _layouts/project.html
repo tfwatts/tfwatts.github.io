@@ -8,6 +8,9 @@ layout: default
       <span class="tag-method">{{ page.method }}</span>
     </p>
     <h1>{{ page.title }}</h1>
+    {% if page.subtitle %}
+    <p class="project-subtitle">{{ page.subtitle }}</p>
+    {% endif %}
   </header>
 
   {{ content }}
