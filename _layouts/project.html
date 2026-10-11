@@ -13,6 +13,12 @@ layout: default
     {% endif %}
   </header>
 
+  {% if page.banner %}
+  <figure class="project-banner">
+    <img src="{{ page.banner | relative_url }}" alt="{{ page.banner_alt }}">
+  </figure>
+  {% endif %}
+
   {{ content }}
 
   <p class="project-back"><a href="{{ '/projects/' | relative_url }}">&larr; Back to Research and Projects</a></p>

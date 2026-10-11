@@ -5,6 +5,8 @@ method: "dNBR and NDVI"
 order: 1
 featured: true
 thumbnail: /assets/images/projects/remote-sensing/wragg-fire/thumb.jpg
+banner: /assets/images/projects/remote-sensing/wragg-fire/banner.png
+banner_alt: "Burn severity classes across the Wragg Fire perimeter."
 summary: "High severity areas lost the most vegetation after the 2015 fire, with mean NDVI falling from 0.59 to 0.19, yet nearly recovered to pre-fire levels by 2019."
 ---
 
@@ -131,7 +133,7 @@ All burn severity classes exhibited positive NDVI recovery trends from 2015 thro
 
 <figure class="project-map wide">
   <iframe class="embed" src="{{ '/assets/images/projects/remote-sensing/wragg-fire/sankey.html' | relative_url }}" title="[Describe the Sankey chart in a few words]" loading="lazy"></iframe>
-  <figcaption>[Figure7. Pixel-level vegetation transitions from pre-fire condition (2014) through burn severity (2015) to recovery status (2019). Flow width proportional to Landsat 8 pixel count (900 m² per pixel).</figcaption>
+  <figcaption>Figure7. Pixel-level vegetation transitions from pre-fire condition (2014) through burn severity (2015) to recovery status (2019). Flow width proportional to Landsat 8 pixel count (900 m² per pixel).</figcaption>
 </figure>
 
 ## Discussion
