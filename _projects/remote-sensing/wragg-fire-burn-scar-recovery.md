@@ -28,7 +28,7 @@ This case study focuses on the 2015 Wragg Fire, near Lake Berryessa in Napa and 
 2. How did vegetation recovery trajectories differ across burn severity classes between 2015 and 2019?
 3. Had any severity class fully returned to pre-fire NDVI levels by the end of the study period?
 
-<figure class="project-map">
+<figure class="project-map wide">
   <a href="{{ '/assets/images/projects/remote-sensing/wragg-fire/fig1-study-area.png' | relative_url }}">
     <img src="{{ '/assets/images/projects/remote-sensing/wragg-fire/fig1-study-area.png' | relative_url }}" alt="Map of the Wragg Fire study area near Lake Berryessa in Napa and Yolo Counties, California.">
   </a>
@@ -78,11 +78,11 @@ Zonal statistics were computed in RStudio using the terra package to extract mea
 
 All final map products were designed and exported in ArcGIS Pro 3.6.3.
 
-<figure class="project-map">
+<figure class="project-map wide">
   <a href="{{ '/assets/images/projects/remote-sensing/wragg-fire/fig-methods.png' | relative_url }}">
     <img src="{{ '/assets/images/projects/remote-sensing/wragg-fire/fig-methods.png' | relative_url }}" alt="[Describe the methods map in a sentence]">
   </a>
-  <figcaption>[Figure number and caption]</figcaption>
+  <figcaption>Figure 2. Visualzation of the normalized burn ratio pre and post Wragg Fire.</figcaption>
 </figure>
 
 ## Results
@@ -103,35 +103,35 @@ Immediately following the fire, mean NDVI values declined across all burned seve
 
 All burn severity classes exhibited positive NDVI recovery trends from 2015 through 2019 as shown in Figure 7. Recovery trajectories varied by severity class. Low severity areas returned to near pre-fire NDVI levels by 2019 (0.49 vs. 0.50 in 2014). Moderate severity areas approached but did not fully reach pre-fire levels (0.41 in 2019 vs. 0.45 in 2014). High severity areas showed the most robust recovery in absolute NDVI gain, rising from 0.19 in 2015 to 0.57 by 2019, nearly returning to pre-fire levels of 0.59.
 
-<figure class="project-map">
+<figure class="project-map wide">
   <a href="{{ '/assets/images/projects/remote-sensing/wragg-fire/fig4-burn-severity.png' | relative_url }}">
     <img src="{{ '/assets/images/projects/remote-sensing/wragg-fire/fig4-burn-severity.png' | relative_url }}" alt="Map of dNBR burn severity classes within the Wragg Fire perimeter, 2015.">
   </a>
-  <figcaption>Figure 4. Wragg Fire dNBR burn severity classification (2015). Classes follow standard USGS severity thresholds (Key & Benson, 2006).</figcaption>
+  <figcaption>Figure 3. Wragg Fire dNBR burn severity classification (2015). Classes follow recommended USGS severity thresholds (Key & Benson, 2006).</figcaption>
 </figure>
 
-<figure class="project-map">
+<figure class="project-map wide">
   <a href="{{ '/assets/images/projects/remote-sensing/wragg-fire/fig5-ndvi-2014.png' | relative_url }}">
     <img src="{{ '/assets/images/projects/remote-sensing/wragg-fire/fig5-ndvi-2014.png' | relative_url }}" alt="Map of pre-fire NDVI across the Wragg Fire study area, summer 2014.">
   </a>
-  <figcaption>Figure 5. Pre-fire NDVI baseline (Summer 2014) derived from Landsat 8 surface reflectance imagery. Color ramp stretched from -0.1 to 0.7 to maintain consistent symbology across all annual NDVI composites. Mean NDVI within the fire perimeter was 0.46.</figcaption>
+  <figcaption>Figure 4. Pre-fire NDVI baseline (Summer 2014) derived from Landsat 8 surface reflectance imagery. Color ramp stretched from -0.1 to 0.7 to maintain consistent symbology across all annual NDVI composites. Mean NDVI within the fire perimeter was 0.46.</figcaption>
 </figure>
 
 <figure class="project-map wide">
   <a href="{{ '/assets/images/projects/remote-sensing/wragg-fire/fig6-ndvi-composites.png' | relative_url }}">
     <img src="{{ '/assets/images/projects/remote-sensing/wragg-fire/fig6-ndvi-composites.png' | relative_url }}" alt="Six-panel series of annual NDVI maps of the Wragg Fire area from 2014 through 2019.">
   </a>
-  <figcaption>Figure 6. Annual NDVI composites (2014–2019) illustrating pre-fire vegetation condition, immediate post-fire vegetation loss, and multi-year recovery trajectory within the Wragg Fire perimeter. All panels use an identical color stretch (-0.1 to 0.7) to ensure visual comparability across years. Mean NDVI values per severity class are reported in Figure 7.</figcaption>
+  <figcaption>Figure 5. Annual NDVI composites (2014–2019) illustrating pre-fire vegetation condition, immediate post-fire vegetation loss, and multi-year recovery trajectory within the Wragg Fire perimeter. All panels use an identical color stretch (-0.1 to 0.7) to ensure visual comparability across years. Mean NDVI values per severity class are reported in Figure 6.</figcaption>
 </figure>
 
-<figure class="project-map">
+<figure class="project-map wide">
   <img src="{{ '/assets/images/projects/remote-sensing/wragg-fire/fig7-ndvi-trajectories.png' | relative_url }}" alt="Line chart of mean NDVI by burn severity class from 2014 through 2019, with a dashed line marking the fire.">
-  <figcaption>Figure 7. Mean NDVI recovery trajectories by burn severity class (2014–2019). The dashed red line indicates the fire event (August 2015).</figcaption>
+  <figcaption>Figure 6. Mean NDVI recovery trajectories by burn severity class (2014–2019). The dashed red line indicates the fire event (August 2015).</figcaption>
 </figure>
 
-<figure class="project-map">
+<figure class="project-map wide">
   <iframe class="embed" src="{{ '/assets/images/projects/remote-sensing/wragg-fire/sankey.html' | relative_url }}" title="[Describe the Sankey chart in a few words]" loading="lazy"></iframe>
-  <figcaption>[Figure number and caption for the Sankey chart]</figcaption>
+  <figcaption>[Figure7. Pixel-level vegetation transitions from pre-fire condition (2014) through burn severity (2015) to recovery status (2019). Flow width proportional to Landsat 8 pixel count (900 m² per pixel).</figcaption>
 </figure>
 
 ## Discussion
