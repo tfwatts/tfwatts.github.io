@@ -7,6 +7,8 @@
   --amber: #F0A33A;
   --muted: #5A6478;
   --white: #FFFFFF;
+  --font-text: Georgia, "Times New Roman", serif;
+  --font-ui: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -15,7 +17,7 @@ body {
   margin: 0;
   background: var(--white);
   color: var(--navy-darkest);
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-family: var(--font-text);
   line-height: 1.6;
 }
 
@@ -406,3 +408,13 @@ img {
   margin: 0 0 0.75rem;
 }
 
+/* Interface font for navigation, buttons, tags, and footer */
+.site-header,
+.site-footer,
+.button,
+.hero-button,
+.filter-button,
+.card-tags,
+.project-tags {
+  font-family: var(--font-ui);
+}
