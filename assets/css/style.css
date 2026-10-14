@@ -472,3 +472,45 @@ img {
   border-radius: 4px;
 }
 
+/* Side-by-side figures: three across, stacked on phones */
+.figure-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+.figure-row.wide {
+  width: min(1200px, calc(100vw - 3rem));
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+.figure-row figure {
+  margin: 0;
+}
+.figure-row img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid rgba(13, 28, 66, 0.15);
+}
+.figure-row figcaption {
+  margin-top: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-align: center;
+}
+@media (max-width: 760px) {
+  .figure-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Highlighted research question */
+.site-main blockquote {
+  margin: 1.5rem 0;
+  padding: 0.75rem 1.25rem;
+  background: var(--cream);
+  border-left: 4px solid var(--amber);
+  font-style: italic;
+}
+
