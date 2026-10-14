@@ -67,7 +67,12 @@ Bathymetric data was obtained from NOAA hydrographic survey H13768, a multibeam 
     <tr><td>Resampled Elevation Raster</td><td><code>Study_Area_Extract</code></td><td>H13768 BAG</td><td>10 m</td><td><span class="na">N/A</span></td><td>NAD83(2011) UTM Zone 18N</td><td>6347</td><td>Raster</td></tr>
     <tr><td>Training Points</td><td><code>JR_Training</code></td><td><code>Study_Area_Extract</code></td><td><span class="na">N/A</span></td><td>157,379</td><td>NAD83(2011) UTM Zone 18N</td><td>6347</td><td>Point</td></tr>
     <tr><td>Test Points</td><td><code>JR_Test</code></td><td><code>Study_Area_Extract</code></td><td><span class="na">N/A</span></td><td>39,345</td><td>NAD83(2011) UTM Zone 18N</td><td>6347</td><td>Point</td></tr>
-    <tr><td>IDW Surface</td><td><code>JR_IDW</code></td><td>
+    <tr><td>IDW Surface</td><td><code>JR_IDW</code></td><td><code>JR_Training</code></td><td>25 m</td><td><span class="na">N/A</span></td><td>NAD83(2011) UTM Zone 18N</td><td>6347</td><td>Raster</td></tr>
+    <tr><td>Spline Surface</td><td><code>JR_Spline</code></td><td><code>JR_Training</code></td><td>25 m</td><td><span class="na">N/A</span></td><td>NAD83(2011) UTM Zone 18N</td><td>6347</td><td>Raster</td></tr>
+    <tr><td>Kriging Surface</td><td><code>JR_Kriging</code></td><td><code>JR_Training</code></td><td>25 m</td><td><span class="na">N/A</span></td><td>NAD83(2011) UTM Zone 18N</td><td>6347</td><td>Raster</td></tr>
+  </tbody>
+</table>
+</div>
 
 ## Methods
 
