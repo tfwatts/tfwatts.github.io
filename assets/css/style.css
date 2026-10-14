@@ -576,3 +576,15 @@ img {
   color: var(--muted);
 }
 
+/* Two-row table headers */
+.data-table thead tr.sub-header th {
+  background: var(--navy);
+  text-align: right;
+}
+.data-table th.group {
+  text-align: center;
+}
+.data-table .divider {
+  border-left: 2px solid var(--amber);
+}
+

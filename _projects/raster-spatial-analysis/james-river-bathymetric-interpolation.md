@@ -145,7 +145,48 @@ Visual comparison of the three output rasters reinforces these findings. IDW pro
 
 Table displays a random sample of 25 test points from the full test dataset. The complete dataset of 39,345 points used for accuracy assessment is available [here](https://docs.google.com/spreadsheets/d/1OydfFk-M-yC_Yfde8VIoA7CUcvO6qcnj/edit?usp=sharing&ouid=114301637572248807406&rtpof=true&sd=true).
 
-[Accuracy Assessment table]
+<div class="table-scroll">
+<table class="data-table numeric">
+  <thead>
+    <tr>
+      <th rowspan="2">#</th>
+      <th rowspan="2">Point ID</th>
+      <th rowspan="2">Observed Depth (m)</th>
+      <th colspan="3" class="group divider">Predicted (m)</th>
+    </tr>
+    <tr class="sub-header">
+      <th class="divider">IDW</th><th>Spline</th><th>Kriging</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>1</td><td>80396</td><td>-6.75</td><td>-6.72</td><td>-6.70</td><td>-6.72</td></tr>
+    <tr><td>2</td><td>52976</td><td>-9.38</td><td>-9.35</td><td>-9.22</td><td>-9.35</td></tr>
+    <tr><td>3</td><td>84962</td><td>-6.11</td><td>-6.04</td><td>-6.01</td><td>-6.01</td></tr>
+    <tr><td>4</td><td>92533</td><td>-2.82</td><td>-2.68</td><td>-2.56</td><td>-2.64</td></tr>
+    <tr><td>5</td><td>95064</td><td>-12.04</td><td>-9.15</td><td>-9.44</td><td>-8.97</td></tr>
+    <tr><td>6</td><td>143707</td><td>-3.96</td><td>-4.04</td><td>-3.98</td><td>-3.97</td></tr>
+    <tr><td>7</td><td>29860</td><td>-6.99</td><td>-6.94</td><td>-6.96</td><td>-6.92</td></tr>
+    <tr><td>8</td><td>84947</td><td>-5.68</td><td>-5.54</td><td>-5.53</td><td>-5.60</td></tr>
+    <tr><td>9</td><td>15353</td><td>-7.30</td><td>-7.28</td><td>-7.33</td><td>-7.26</td></tr>
+    <tr><td>10</td><td>43696</td><td>-8.68</td><td>-8.74</td><td>-8.70</td><td>-8.76</td></tr>
+    <tr><td>11</td><td>108030</td><td>-5.52</td><td>-5.50</td><td>-5.55</td><td>-5.53</td></tr>
+    <tr><td>12</td><td>167234</td><td>-4.02</td><td>-4.01</td><td>-4.00</td><td>-4.01</td></tr>
+    <tr><td>13</td><td>75440</td><td>-8.28</td><td>-8.33</td><td>-8.29</td><td>-8.36</td></tr>
+    <tr><td>14</td><td>92604</td><td>-2.82</td><td>-2.79</td><td>-2.79</td><td>-2.68</td></tr>
+    <tr><td>15</td><td>107961</td><td>-7.59</td><td>-7.04</td><td>-7.93</td><td>-7.21</td></tr>
+    <tr><td>16</td><td>65446</td><td>-6.63</td><td>-6.50</td><td>-6.56</td><td>-6.48</td></tr>
+    <tr><td>17</td><td>193570</td><td>-2.58</td><td>-2.58</td><td>-2.59</td><td>-2.58</td></tr>
+    <tr><td>18</td><td>89058</td><td>-9.05</td><td>-9.36</td><td>-9.32</td><td>-9.42</td></tr>
+    <tr><td>19</td><td>33132</td><td>-3.47</td><td>-3.47</td><td>-3.47</td><td>-3.46</td></tr>
+    <tr><td>20</td><td>193627</td><td>-2.36</td><td>-2.33</td><td>-2.35</td><td>-2.28</td></tr>
+    <tr><td>21</td><td>31501</td><td>-7.71</td><td>-7.73</td><td>-7.73</td><td>-7.72</td></tr>
+    <tr><td>22</td><td>109109</td><td>-3.81</td><td>-3.85</td><td>-3.89</td><td>-3.72</td></tr>
+    <tr><td>23</td><td>97910</td><td>-2.85</td><td>-2.86</td><td>-2.86</td><td>-2.80</td></tr>
+    <tr><td>24</td><td>177759</td><td>-4.73</td><td>-5.38</td><td>-5.36</td><td>-5.30</td></tr>
+    <tr><td>25</td><td>19850</td><td>-2.59</td><td>-2.61</td><td>-2.61</td><td>-2.61</td></tr>
+  </tbody>
+</table>
+</div>
 
 <figure class="project-map wide">
   <a href="{{ '/assets/images/projects/raster-spatial-analysis/james-river/fig-final-map.png' | relative_url }}">
