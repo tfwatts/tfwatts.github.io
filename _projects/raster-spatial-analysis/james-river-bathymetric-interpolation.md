@@ -65,8 +65,9 @@ Bathymetric data was obtained from NOAA hydrographic survey H13768, a multibeam 
   </thead>
   <tbody>
     <tr><td>Resampled Elevation Raster</td><td><code>Study_Area_Extract</code></td><td>H13768 BAG</td><td>10 m</td><td><span class="na">N/A</span></td><td>NAD83(2011) UTM Zone 18N</td><td>6347</td><td>Raster</td></tr>
-    <tr><td>Training Points</td><td><code>JR_Training</code></td><td><code>Study_Area_Extract</code></td><td><span class="na">N/A</span></td><td>157,379</td><td>NAD83(2011) UTM Zone 18N</td><td>6347</td><td>Point</td></tr>
-    <tr><td>Test Points</td><td><code>JR_Test</code></td><td><code>Study_Area_Extract</code></td><td><span class="na">N/A</span></td><td>39,345</td><td>NAD83(2011) UTM Zone 18N</td><td>6347</td><td>Point</td></tr>
+    <tr><td>Extracted Points</td><td><code>Study_Area_Points</code></td><td><code>Study_Area_Extract</code></td><td><span class="na">N/A</span></td><td>196,724</td><td>NAD83(2011) UTM Zone 18N</td><td>6347</td><td>Point</td></tr>
+    <tr><td>Training Points</td><td><code>JR_Training</code></td><td><code>Study_Area_Points</code></td><td><span class="na">N/A</span></td><td>157,379</td><td>NAD83(2011) UTM Zone 18N</td><td>6347</td><td>Point</td></tr>
+    <tr><td>Test Points</td><td><code>JR_Test</code></td><td><code>Study_Area_Points</code></td><td><span class="na">N/A</span></td><td>39,345</td><td>NAD83(2011) UTM Zone 18N</td><td>6347</td><td>Point</td></tr>
     <tr><td>IDW Surface</td><td><code>JR_IDW</code></td><td><code>JR_Training</code></td><td>25 m</td><td><span class="na">N/A</span></td><td>NAD83(2011) UTM Zone 18N</td><td>6347</td><td>Raster</td></tr>
     <tr><td>Spline Surface</td><td><code>JR_Spline</code></td><td><code>JR_Training</code></td><td>25 m</td><td><span class="na">N/A</span></td><td>NAD83(2011) UTM Zone 18N</td><td>6347</td><td>Raster</td></tr>
     <tr><td>Kriging Surface</td><td><code>JR_Kriging</code></td><td><code>JR_Training</code></td><td>25 m</td><td><span class="na">N/A</span></td><td>NAD83(2011) UTM Zone 18N</td><td>6347</td><td>Raster</td></tr>
@@ -78,7 +79,7 @@ Bathymetric data was obtained from NOAA hydrographic survey H13768, a multibeam 
 
 All data used in this analysis was processed in NAD83(2011) UTM Zone 18N (EPSG 6347), the native coordinate system of the NOAA H13768 bathymetric survey. UTM Zone 18N is appropriate for this study area as the James River falls well within the zone's extent, minimizing distortion of distance and area. The metric unit system is suited to bathymetric interpolation, where depth and spatial relationships are generally expressed in meters.
 
-A total of 196,724 points were extracted from `Study_Area_Extract`, a 10-meter resampled derivative of the NOAA H13768 BAG raster, using the Raster to Point tool in ArcGIS Pro. Each point represents the center of a 10-meter raster cell containing a bathymetric depth measurement, recorded in meters below Mean Lower Low Water (MLLW). Points were generated only where valid sonar measurements existed; cells corresponding to the unsurveyed gaps between sonar swaths produced no points, as NoData cells are automatically excluded during raster to point conversion.
+A total of 196,724 points (`Study_Area_Points`) were extracted from `Study_Area_Extract`, a 10-meter resampled derivative of the NOAA H13768 BAG raster, using the Raster to Point tool in ArcGIS Pro. Each point represents the center of a 10-meter raster cell containing a bathymetric depth measurement, recorded in meters below Mean Lower Low Water (MLLW). Points were generated only where valid sonar measurements existed; cells corresponding to the unsurveyed gaps between sonar swaths produced no points, as NoData cells are automatically excluded during raster to point conversion.
 
 The 196,724 extracted points were randomly divided into training and test datasets using the Subset Features tool in ArcGIS Pro. A total of 157,379 points (80%) were assigned to the training dataset (`JR_Training`) and used as input for all three interpolation methods. The remaining 39,345 points (20%) were withheld as the test dataset (`JR_Test`) and reserved exclusively for accuracy assessment. Random sampling was used for the split, meaning spatial distribution of training and test points were not explicitly controlled.
 
@@ -119,7 +120,22 @@ The 196,724 extracted points were split 80/20 by percentage into training (157,3
 
 The three interpolation methods produced notably different results in both surface statistics and predictive accuracy. IDW and Kriging generated surfaces closely aligned with the observed depth range of -22.72 to -0.85 meters, while Spline produced values significantly outside the observed range, with minimum and maximum values of -105.09 and 483.60 meters respectively. This is consistent with ESRI's Spline documentation, which states that a Regularized Spline will produce a gradually changing surface with values that may lie outside the sample data range, in this case, considerably so. The mean depth values for IDW (-4.14m) and Kriging (-4.14m) were nearly identical, both slightly shallower than the observed mean of -5.21m, while Spline produced a mean of -1.98m, reflecting the distorting effect of the outlier values in the statistics.
 
-[Interpolation Results Comparison table]
+### Interpolation results comparison
+
+<div class="table-scroll">
+<table class="data-table numeric">
+  <caption>&#9888; Spline minimum, maximum, and standard deviation values indicate significant deviation from the observed depth range, highlighted in red.</caption>
+  <thead>
+    <tr><th>Method</th><th>Minimum (m)</th><th>Maximum (m)</th><th>Mean (m)</th><th>Standard Deviation (m)</th></tr>
+  </thead>
+  <tbody>
+    <tr class="source-row"><td>Observed (<code>JR_Training</code>)</td><td>-22.7154</td><td>-0.8480</td><td>-5.2107</td><td>2.8616</td></tr>
+    <tr><td>IDW</td><td>-22.5145</td><td>-1.1434</td><td>-4.1353</td><td>2.3836</td></tr>
+    <tr><td>Spline</td><td class="flag">-105.0881</td><td class="flag">483.6015</td><td>-1.9805</td><td class="flag">13.9832</td></tr>
+    <tr><td>Kriging</td><td>-22.3755</td><td>-1.3282</td><td>-4.1422</td><td>2.3779</td></tr>
+  </tbody>
+</table>
+</div>
 
 Accuracy assessment using 39,345 withheld test points revealed that all three methods performed similarly, with RMSE values under 0.20 meters. IDW achieved the lowest RMSE of 0.167 meters, followed closely by Spline at 0.170 meters and Kriging at 0.196 meters. The low RMSE values across all three methods indicate that each approach was capable of predicting depth at unsampled locations with reasonable accuracy at the point level. It is worth noting that, despite Spline's divergence in range, its point-level RMSE remained competitive, suggesting the extremes may have been concentrated in areas distant from test points rather than uniformly distributed across the surface.
 

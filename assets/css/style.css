@@ -553,3 +553,26 @@ img {
   border-radius: 3px;
 }
 
+/* Number tables: right-aligned, even digits */
+.data-table.numeric th:not(:first-child),
+.data-table.numeric td:not(:first-child) {
+  text-align: right;
+  font-family: var(--font-ui);
+  font-variant-numeric: tabular-nums;
+}
+.data-table .source-row td {
+  border-bottom: 2px solid var(--navy);
+}
+.data-table .flag {
+  color: #C0392B;
+  font-weight: 600;
+}
+.data-table caption {
+  caption-side: bottom;
+  text-align: left;
+  padding-top: 0.5rem;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: var(--muted);
+}
+
