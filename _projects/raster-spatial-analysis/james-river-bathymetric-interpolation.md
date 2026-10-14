@@ -89,7 +89,7 @@ Inverse Distance Weighting (IDW) estimates unknown values at unsampled locations
 
 ### Spline
 
-Spline interpolation estimates unknown values by using an algorithm (Spline equation) that results in a smooth mathematical curve through known data points, minimizing the curvature of the surface. Spline does not rely solely on distance because it considers the shape of the surface, producing a smooth continuous result that passes exactly through each input point. Two variants exist: Regularized and Tension, regularized was selected for this analysis.
+Spline interpolation estimates unknown values by using an algorithm (Spline equation) that results in a smooth mathematical curve through known data points, minimizing the curvature of the surface. Spline does not rely solely on distance because it considers the shape of the surface, producing a smooth continuous result that passes exactly through each input point. Two variants exist: Regularized and Tension and regularized was selected for this analysis.
 
 ### Kriging
 
@@ -103,15 +103,15 @@ The 196,724 extracted points were split 80/20 by percentage into training (157,3
 
 <div class="figure-row wide">
   <figure>
-    <a href="{{ '/assets/images/projects/raster-spatial-analysis/james-river/fig-idw.png' | relative_url }}"><img src="{{ '/assets/images/projects/raster-spatial-analysis/james-river/fig-idw.png' | relative_url }}" alt="[Describe the first image]"></a>
+    <a href="{{ '/assets/images/projects/raster-spatial-analysis/james-river/fig-idw.png' | relative_url }}"><img src="{{ '/assets/images/projects/raster-spatial-analysis/james-river/fig-idw.png' | relative_url }}" alt="IDW tool inputs used to generate the interpolated depth surface"></a>
     <figcaption>IDW tool inputs used to generate the interpolated depth surface.</figcaption>
   </figure>
   <figure>
-    <a href="{{ '/assets/images/projects/raster-spatial-analysis/james-river/fig-spline.png' | relative_url }}"><img src="{{ '/assets/images/projects/raster-spatial-analysis/james-river/fig-spline.png' | relative_url }}" alt="[Describe the second image]"></a>
+    <a href="{{ '/assets/images/projects/raster-spatial-analysis/james-river/fig-spline.png' | relative_url }}"><img src="{{ '/assets/images/projects/raster-spatial-analysis/james-river/fig-spline.png' | relative_url }}" alt="Spline tool inputs used to generate the interpolated depth surface."></a>
     <figcaption>Spline tool inputs used to generate the interpolated depth surface.</figcaption>
   </figure>
   <figure>
-    <a href="{{ '/assets/images/projects/raster-spatial-analysis/james-river/fig-kriging.png' | relative_url }}"><img src="{{ '/assets/images/projects/raster-spatial-analysis/james-river/fig-kriging.png' | relative_url }}" alt="[Describe the third image]"></a>
+    <a href="{{ '/assets/images/projects/raster-spatial-analysis/james-river/fig-kriging.png' | relative_url }}"><img src="{{ '/assets/images/projects/raster-spatial-analysis/james-river/fig-kriging.png' | relative_url }}" alt="Kriging tool inputs used to generate the interpolated depth surface."></a>
     <figcaption>Kriging tool inputs used to generate the interpolated depth surface.</figcaption>
   </figure>
 </div>
@@ -129,7 +129,7 @@ The three interpolation methods produced notably different results in both surfa
     <tr><th>Method</th><th>Minimum (m)</th><th>Maximum (m)</th><th>Mean (m)</th><th>Standard Deviation (m)</th></tr>
   </thead>
   <tbody>
-    <tr class="source-row"><td>Observed (<code>JR_Training</code>)</td><td>-22.7154</td><td>-0.8480</td><td>-5.2107</td><td>2.8616</td></tr>
+    <tr class="source-row"><td>Observed (<code>Study_Area_Points</code>)</td><td>-22.7154</td><td>-0.8480</td><td>-5.2107</td><td>2.8616</td></tr>
     <tr><td>IDW</td><td>-22.5145</td><td>-1.1434</td><td>-4.1353</td><td>2.3836</td></tr>
     <tr><td>Spline</td><td class="flag">-105.0881</td><td class="flag">483.6015</td><td>-1.9805</td><td class="flag">13.9832</td></tr>
     <tr><td>Kriging</td><td>-22.3755</td><td>-1.3282</td><td>-4.1422</td><td>2.3779</td></tr>
@@ -203,8 +203,10 @@ Kriging is the only method among the three that is grounded in spatial statistic
 
 For hydrographic and navigational applications, surface quality and physical realism are potentially as important as raw predictive accuracy. A smooth, statistically grounded surface that stays within observed depth values is more suitable for practical use than one optimized purely for point-level error minimization. On this basis, Kriging is recommended as the preferred interpolation method for predicting bathymetric depth in unmeasured areas between sonar swaths in the James River study area.
 
+### Answer to research question
+
+> Of the three spatial interpolation methods evaluated, Kriging produced the most appropriate continuous bathymetric surface from discrete point values extracted from the NOAA H13768 multibeam sonar raster in the James River, Virginia, based on its statistical foundation, surface smoothness, and adherence to the observed depth range.
+
 ### Limitations
 
 Several limitations affect the conclusions of this analysis. The training and test datasets were generated using random sampling via the Subset Features tool, meaning spatial distribution of points was not explicitly controlled. This introduces the possibility that certain areas of the study region were underrepresented in the training data, potentially affecting interpolation accuracy in those locations. Additionally, the original 1-meter BAG raster was resampled to 10 meters prior to point extraction, reducing the spatial resolution of the input data and potentially smoothing fine-scale depth variation that may be present in the original survey. Default parameters were accepted for all three interpolation methods without optimization, and a custom semivariogram was not fitted for Kriging, which may have improved its performance. Finally, the accuracy assessment table presented in this report represents a sample of 25 points drawn from the full test dataset of 39,345 points and should be interpreted as illustrative rather than exhaustive.
-
-Of the three spatial interpolation methods evaluated, Kriging produced the most appropriate continuous bathymetric surface from discrete point values extracted from the NOAA H13768 multibeam sonar raster in the James River, Virginia, based on its statistical foundation, surface smoothness, and adherence to the observed depth range.
