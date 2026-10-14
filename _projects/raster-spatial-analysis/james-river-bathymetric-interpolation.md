@@ -33,7 +33,41 @@ The study area encompasses two adjacent estuarine segments of the tidal James Ri
 
 Bathymetric data was obtained from NOAA hydrographic survey H13768, a multibeam sonar survey of the southwestern Chesapeake Bay conducted between April 2023 and February 2024. The survey was delivered as a Bathymetric Attributed Grid (BAG) raster at 1-meter resolution, referenced vertically to Mean Lower Low Water (MLLW) and horizontally to the North American Datum of 1983 (NAD83 2011), UTM Zone 18N. The study area boundary polygons were obtained from the Virginia DEQ Estuaries dataset (2024 Final Water Quality Assessment Integrated Report), accessed via the Virginia DEQ ArcGIS Hub, and used as a mask to extract bathymetric values within the two James River segments of interest.
 
-[Source Datasets and Derived Products table]
+### Source datasets
+
+<div class="table-scroll">
+<table class="data-table">
+  <thead>
+    <tr><th>Field</th><th>NOAA H13768 BAG</th><th>VA DEQ Estuaries</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Official Name</td><td>NOS Hydrographic Survey H13768</td><td>Estuaries (2024 Final WQA IR Assessment)</td></tr>
+    <tr><td>Year Published/Updated</td><td>2024</td><td>2024</td></tr>
+    <tr><td>Author/Owner</td><td>NOAA National Ocean Service, Office of Coast Survey</td><td>Virginia Department of Environmental Quality</td></tr>
+    <tr><td>URL/Repository</td><td><a href="https://www.ngdc.noaa.gov/nos/H12001-H14000/H13768.html" target="_blank">ngdc.noaa.gov – H13768</a></td><td><a href="https://geohub-vadeq.hub.arcgis.com/datasets/abac9b1d68fd494b9c7e34158283fd99_4/about" target="_blank">VA DEQ ArcGIS Hub</a></td></tr>
+    <tr><td>Description</td><td>Multibeam sonar bathymetric survey of southwestern Chesapeake Bay, delivered as a gridded BAG raster with elevation and uncertainty bands</td><td>Polygon dataset of estuarine water body segments identified in Virginia's 2024 305(b)/303(d) Water Quality Assessment Integrated Report</td></tr>
+    <tr><td>Coordinate System</td><td>UTM Zone 18N</td><td>WGS 1984 Web Mercator Auxiliary Sphere</td></tr>
+    <tr><td>Geodesic Model</td><td>GRS80</td><td>WGS84</td></tr>
+    <tr><td>Horizontal Datum</td><td>NAD83 (2011)</td><td>WGS84</td></tr>
+    <tr><td>Vertical Datum</td><td>MLLW</td><td><span class="na">N/A</span></td></tr>
+    <tr><td>EPSG Code</td><td>6347</td><td>3857</td></tr>
+    <tr><td>Geometry Type</td><td>Raster</td><td>Polygon</td></tr>
+  </tbody>
+</table>
+</div>
+
+### Derived data products
+
+<div class="table-scroll">
+<table class="data-table">
+  <thead>
+    <tr><th>Product</th><th>Dataset Name</th><th>Derived From</th><th>Resolution / Cell Size</th><th>Point Count</th><th>Coordinate System</th><th>EPSG</th><th>Geometry</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>Resampled Elevation Raster</td><td><code>Study_Area_Extract</code></td><td>H13768 BAG</td><td>10 m</td><td><span class="na">N/A</span></td><td>NAD83(2011) UTM Zone 18N</td><td>6347</td><td>Raster</td></tr>
+    <tr><td>Training Points</td><td><code>JR_Training</code></td><td><code>Study_Area_Extract</code></td><td><span class="na">N/A</span></td><td>157,379</td><td>NAD83(2011) UTM Zone 18N</td><td>6347</td><td>Point</td></tr>
+    <tr><td>Test Points</td><td><code>JR_Test</code></td><td><code>Study_Area_Extract</code></td><td><span class="na">N/A</span></td><td>39,345</td><td>NAD83(2011) UTM Zone 18N</td><td>6347</td><td>Point</td></tr>
+    <tr><td>IDW Surface</td><td><code>JR_IDW</code></td><td>
 
 ## Methods
 
@@ -96,7 +130,7 @@ Table displays a random sample of 25 test points from the full test dataset. The
   <a href="{{ '/assets/images/projects/raster-spatial-analysis/james-river/fig-final-map.png' | relative_url }}">
     <img src="{{ '/assets/images/projects/raster-spatial-analysis/james-river/fig-final-map.png' | relative_url }}" alt="[Describe the final map in a sentence]">
   </a>
-  <figcaption>omparison of IDW, Spline, and Kriging interpolated bathymetric surfaces, James River, Virginia.</figcaption>
+  <figcaption>Comparison of IDW, Spline, and Kriging interpolated bathymetric surfaces, James River, Virginia.</figcaption>
 </figure>
 
 ## Conclusion
