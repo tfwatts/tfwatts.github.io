@@ -7,7 +7,7 @@ order: 7
 featured: true
 theme: ogilby
 thumbnail: /assets/images/projects/cartography/week-7/thumb.jpg
-summary: "The Appalachian Trail from Harpers Ferry to the Tennessee line."
+summary: "**The Final Project for Cartograghy** The Appalachian Trail from Harpers Ferry to the Tennessee line."
 ---
 
 About a quarter of the Appalachian Trail runs through Virginia, more than through any other state. From Harpers Ferry on the Potomac River to the Tennessee line south of Damascus, Virginia's section covers 554.5 miles, climbing from river crossings a few hundred feet above sea level to nearly 5,500 feet in the highlands around Mount Rogers.
