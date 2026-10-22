@@ -5,7 +5,7 @@ method: "Viewshed-Based Analysis"
 order: 2
 featured: true
 thumbnail: /assets/images/projects/raster-spatial-analysis/line-of-sight-optimization-for-counter-uas-radar-siting/thumb.jpg
-banner: /assets/images/projects/raster-spatial-analysis/line-of-sight-optimization-for-counter-uas-radar-siting/banner.jpg
+banner: /assets/images/projects/raster-spatial-analysis/line-of-sight-optimization-for-counter-uas-radar-siting/banner.png
 banner_alt: "Satellite Photo of Levi Stadium"
 summary: "A viewshed-based siting analysis that uses a 1 m terrain-and-building surface model to place counter-UAS radars around Levi’s Stadium, evaluating how much of a drone’s low-altitude approach corridor a small set of sites can cover and whether coverage is limited by terrain or by sensor count."
 ---
@@ -200,15 +200,15 @@ The study area is a 20 km-radius region centered on Levi's Stadium in Santa Clar
   the greatest marginal coverage was selected, after which its coverage was subtracted and the process repeated.
 </p>
 
-<h3 style="text-align:center;">Notes on methods</h3>
-<p>
+## Notes on methods
+
   Two practical constraints shaped how the process was run. First, because each scoring round required
   re-evaluation of every candidate against the updated uncovered surface at 1&nbsp;m resolution, a full round was
   computationally expensive. As a result, candidates contributing negligible coverage in the first round were
   excluded from subsequent rounds, and scoring in later rounds was restricted to the strongest candidates by
   initial coverage. This is an approximation, as a low-scoring candidate is assumed not to become a leading
   marginal contributor later.
-</p>
+
 <p>
   Second, rather than iterating until the entire coverable corridor was covered, selection was run for a fixed
   budget of three radars. This reframes the analysis from &ldquo;the minimum sensors for complete coverage&rdquo;
