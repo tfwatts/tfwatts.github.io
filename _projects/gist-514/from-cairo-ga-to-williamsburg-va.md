@@ -9,7 +9,7 @@ summary: "A StoryMap combining a time-based ArcGIS Pro animation, Census API dat
 storymap: "https://storymaps.arcgis.com/stories/59f497c4e1ea40af953246b144d6173c"
 ---
 
-I created this story for a StoryMaps assignment in my GIS master’s program at the University of Arizona. It follows the nine places I’ve lived, from my hometown of Cairo, Georgia, through a Coast Guard career that ended in Williamsburg, Virginia, and compares each community with the nation in the year I arrived. As you scroll, watch the arrows in the comparison maps shift from below the national average to well above it.
+I created this story for a StoryMaps assignment in my GIS master’s program at the University of Arizona. It follows the nine places I’ve lived, from my hometown of Cairo, Georgia, through a Coast Guard career that has taken me to Williamsburg, Virginia, and compares each community with the nation in the year I arrived. As you scroll, watch the arrows in the comparison maps shift from below the national average to well above it.
 
 {% include storymap.html %}
 
