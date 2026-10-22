@@ -5,6 +5,7 @@ method: "Attribute Queries, Spatial Queries, Spatial Joins, and Combination"
 order: 1
 featured: false
 thumbnail: /assets/images/projects/vector-spatial-analysis/high-hazard-dams-in-north-carolina/banner.jpg
+banner: /assets/images/projects/vector-spatial-analysis/high-hazard-dams-in-north-carolina/banner.jpg
 banner_alt: "Fontana hydroelectric dam"
 summary: "A national-to-county analysis identifying where high-hazard, poor-condition dams concentrate and how that burden intersects with population across North Carolina’s counties."
 ---
@@ -36,7 +37,7 @@ Spatial Joins
 Combination (Attribute + Spatial + Join)
 
 7. Which North Carolina counties combine a high at-risk-dam burden with a large county population (potential risk)?
-8. Which North Carolina counties carry a high dam burden despite small populations — indicating high exposure but low local capacity?
+8. Which North Carolina counties carry a high dam burden despite small populations, indicating high exposure but low local capacity?
 
 ## Study area
 
@@ -73,7 +74,7 @@ Spatial joins transferred and aggregated information between layers based on loc
 
 The combination questions integrated attribute filtering, spatial relationships, and joins. Starting from the county layer containing both at-risk dam counts and summarized population, counties were classified by dam burden and population using manual breaks. Select by Attributes then isolated counties meeting combined criteria; for example, a high at-risk-dam count together with a large population (Question 7), or a high dam count paired with a small population (Question 8). Because dam counts derived from a spatial join and population from a tabular join, answering these questions required all three operation types working together on a single integrated layer.
 
-### Assumptions
+## Assumptions
 
 This analysis defines an "at-risk" dam as one with a High hazard potential classification and a condition assessment of Poor or Unsatisfactory. This assumes hazard potential and condition together approximate risk—hazard captures the consequence of failure (probable loss of life), while condition captures the likelihood of a problem. It is important to note that hazard potential does not, by itself, indicate that a dam is failing; it describes downstream consequences if failure occurred. A key assumption is that dams lacking a condition rating are excluded rather than assumed safe: of roughly 17,000 High-hazard dams nationally, only about 2,800 carry a Poor or Unsatisfactory rating, and the remainder are unrated or better-rated. The at-risk set therefore reflects only dams with reported poor conditions and undercounts true exposure.
 
