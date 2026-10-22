@@ -1,0 +1,8 @@
+{% if page.storymap %}
+<figure class="storymap">
+  <div class="storymap-frame">
+    <iframe src="{{ page.storymap }}" title="{{ page.title }}: ArcGIS StoryMap" loading="lazy" allowfullscreen allow="geolocation"></iframe>
+  </div>
+  <p class="button-row"><a class="button" href="{{ page.storymap }}" target="_blank" rel="noopener">Open the full story &#8599;</a></p>
+</figure>
+{% endif %}
